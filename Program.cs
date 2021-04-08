@@ -14,8 +14,6 @@ namespace task_1_sorting
             bool arrayEntered = false;
             while (true)
             {
-                // Comand = Console.ReadLine();
-                //if (Comand == "menu")
                 {
                     Console.WriteLine("СПИСОК ДЕЙСТВИЙ");
                     Console.WriteLine("[1] Заполнение массива");
@@ -35,12 +33,15 @@ namespace task_1_sorting
                                     Console.Write("{0}-е число: ", i + 1);
                                     arr[i] = double.Parse(Console.ReadLine());
                                 }
+                                arrayEntered = true;
+
                             }
+
                             catch (Exception)
                             {
                                 Console.WriteLine("Возникла ошибка,вы ввели не число");
+                                arrayEntered = false;
                             }
-                            arrayEntered = true;
                             break;
 
                         case "2": //сортировка пузырьком
@@ -126,7 +127,7 @@ namespace task_1_sorting
                         case "3":
                             if (arrayEntered)
                             {
-                                for (int k = 0; k < 6; k++)
+                                for (int k = 0; k < 6; k++)     
                                 {
                                     double z;
                                     for (int i = 0; i < 4; i++)
